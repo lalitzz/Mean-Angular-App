@@ -1,15 +1,14 @@
 <app-header></app-header>
-<div class="container-fluid">
+<div class="container-fluid main">
   <div class="row">
-    <div class="col-md-2 navbar">
+    <div class="col-sm">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="col-md-10">
-      Hello
+    <div class="col-sm">
+      <app-main [element]="hello" (fire)="countChange($event)">
+        <app-dummy></app-dummy>
+      </app-main>
     </div>
   </div>
 </div>
-
-
-
 <app-footer></app-footer>

@@ -1,0 +1,19 @@
+<div [innerHTML]="value" #d>
+
+</div>
+
+<button (click)="onClick()">Click</button>
+
+<button (click)="change()">Event</button>
+
+<button (click)="change()">Event</button>
+
+<input type="text" [(ngModel)]="input"/>
+
+<ul *appUnless="!show">
+  <li *ngFor="let data of arr; let index" [ngClass]="{odd: data % 2 !== 0}">{{data}}</li>
+</ul>
+
+
+
+<p [appBetterHighlight]="'red'" defaultColor="yellow">Hello World</p>
