@@ -54,11 +54,13 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 100%;
+    max-width: 100%;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
+    min-height: 100%;
+    max-height: 100%;
 }
 
 #sidebar.active {

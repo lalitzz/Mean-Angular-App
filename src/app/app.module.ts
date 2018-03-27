@@ -15,6 +15,7 @@ import { DummyComponent } from './dummy/dummy.component';
 import { BasicHighlightDirective } from './directives/basichighlight.directive';
 import { BetterHighlightDirective } from './directives/better/betterhighlight.directive';
 import { UnlessDirective } from './directives/unless/unless.directive';
+import { TweetService } from './services/tweet.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { UnlessDirective } from './directives/unless/unless.directive';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TweetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
