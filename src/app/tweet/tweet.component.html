@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let data of tweetData">
-    {{data.tweet}}
+    <app-show [tweet]=data></app-show>
   </li>
 </ul>
