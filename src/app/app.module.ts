@@ -16,6 +16,8 @@ import { BasicHighlightDirective } from './directives/basichighlight.directive';
 import { BetterHighlightDirective } from './directives/better/betterhighlight.directive';
 import { UnlessDirective } from './directives/unless/unless.directive';
 import { TweetService } from './services/tweet.service';
+import { TweetComponent } from './tweet/tweet.component';
+import { ShowComponent } from './tweet/show/show.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TweetService } from './services/tweet.service';
     DummyComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    TweetComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 export class TweetService {
-  private tweets: [{
+  private tweets:Array<Object> = [{
       tweet: 'My first Tweet',
       owner: 'Lalit',
       created_at: '27-Mar-2017',
