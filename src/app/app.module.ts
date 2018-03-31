@@ -18,6 +18,14 @@ import { UnlessDirective } from './directives/unless/unless.directive';
 import { TweetService } from './services/tweet.service';
 import { TweetComponent } from './tweet/tweet.component';
 import { ShowComponent } from './tweet/show/show.component';
+import { CreateComponent } from './tweet/create/create.component';
+import { EditComponent } from './tweet/edit/edit.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing.module';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
+
+
 
 @NgModule({
   declarations: [
@@ -31,13 +39,16 @@ import { ShowComponent } from './tweet/show/show.component';
     BetterHighlightDirective,
     UnlessDirective,
     TweetComponent,
-    ShowComponent
+    ShowComponent,
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [TweetService],
+  providers: [TweetService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
