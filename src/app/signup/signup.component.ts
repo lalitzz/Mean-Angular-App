@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
     gender: ''
   };
   submitted = false;
+  nameValid = false;
 
   constructor() { }
 
@@ -33,7 +34,11 @@ export class SignupComponent implements OnInit {
     this.user.gender = this.signup.form.value.gender;
     console.log(this.user);
     console.log(this.signup);
-    this.signup.reset();
+    if(this.user.fname == 'foo'){
+      this.signup.form.controls.fname.patchValue({});
+      //this.nameValid = true;
+    }
+    //this.signup.reset();
   }
 
 }
