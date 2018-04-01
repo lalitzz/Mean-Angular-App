@@ -23,7 +23,7 @@ import { EditComponent } from './tweet/edit/edit.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing.module';
 import { AuthGuard } from './auth-guard.service';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 
 
 
