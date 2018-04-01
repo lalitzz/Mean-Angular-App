@@ -21,9 +21,11 @@ import { ShowComponent } from './tweet/show/show.component';
 import { CreateComponent } from './tweet/create/create.component';
 import { EditComponent } from './tweet/edit/edit.component';
 import { Routes, RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing.module';
+import { AppRoutingModule } from './modules/app.routing.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './services/auth.service';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -41,7 +43,9 @@ import { AuthService } from './services/auth.service';
     TweetComponent,
     ShowComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

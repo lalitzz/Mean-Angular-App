@@ -12,8 +12,11 @@ export class HeaderComponent implements OnInit{
 
   constructor(private logService: AuthService) {}
   ngOnInit() {
+    // this.logService.getAuthStatus().subscribe(data => {
+    //   this.isLogged = data;
+    // });
     this.logService.getAuthStatus().subscribe(data => {
-      this.isLogged = data;
+      this.isLogged =data;
     });
   }
 
