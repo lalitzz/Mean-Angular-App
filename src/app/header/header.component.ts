@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core'
 import { AuthService } from '../services/auth.service';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit{
   value:string = 'One Way';
   isLogged: Boolean = false;
 
-  constructor(private logService: AuthService) {}
+  constructor(private logService: AuthService, private router: Router, private route: ActivatedRoute) {}
   ngOnInit() {
     // this.logService.getAuthStatus().subscribe(data => {
     //   this.isLogged = data;
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit{
 
 
   login() {
-    this.logService.login();
+    this.router.navigate(['/login']);
   }
 
   logout() {

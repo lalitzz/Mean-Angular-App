@@ -1,9 +1,11 @@
 import {Component,Injectable,OnInit, OnDestroy,Input,Output,EventEmitter} from '@angular/core'
+import { CredentialService } from './credential.service';
 
+@Injectable()
 export class AuthService {
   @Output() loginEvent: EventEmitter<any> = new EventEmitter();
     loggedIn = false;
-  
+    constructor(private credential: CredentialService){}
     isAuthenticated() {
       const promise = new Promise(
         (resolve, reject) => {
@@ -15,9 +17,15 @@ export class AuthService {
       return promise;
     }
   
-    login() {
-      this.loggedIn = true;
-      this.loginEvent.emit(this.loggedIn);
+    login(email:string, password: string) {
+      this.credential.validateUser(email, password).then((data) => {
+        if(data['status'] == 200){
+          this.loggedIn = true;
+          this.loginEvent.emit(this.loggedIn)
+        }
+      }).catch((error) => {
+        console.log("error"+error);
+      });
     }
   
     logout() {

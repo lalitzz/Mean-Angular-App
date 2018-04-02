@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
+import { AuthService } from '../services/auth.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +12,15 @@ import { Observable } from 'rxjs/Observable';
 export class LoginComponent implements OnInit {
   signupForm: FormGroup;
   forbiddenUsernames = ['Vishnu', 'Senthil'];
-  constructor() { }
+  constructor(private auth: AuthService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
       'userData': new FormGroup({
-        'username': new FormControl(null, [Validators.required, this.forbiddenNames.bind(this)]),
         'email': new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmails)
       }),
-      'fname': new FormControl(null, [Validators.required], this.forbiddenFname),
       'password': new FormControl(null, [Validators.required])
     });
-    // this.signupForm = new FormGroup({
-      
-    //     'username': new FormControl(null, [Validators.required, this.forbiddenNames.bind(this)]),
-    //     'email': new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmails),
-    //     'password': new FormControl(null)
-    // });
   }
 
   forbiddenNames(control: FormControl): {[s: string]: boolean} {
@@ -49,19 +43,6 @@ export class LoginComponent implements OnInit {
     return promise;
   }
 
-  // forbiddenFnam(control: FormControl): Promise<any> | Observable<any> {
-  //   const promise = new Promise<any>((resolve, reject) => {
-  //     setTimeout(() => {
-  //       if (control.value === 'test@test.com') {
-  //         resolve({'emailIsForbidden': true});
-  //       } else {
-  //         resolve(null);
-  //       }
-  //     }, 1500);
-  //   });
-  //   return promise;
-  // }
-
   forbiddenFname(control: FormControl): Promise<any> | Observable<any>{
     return new Promise<any>((resolve, reject) => {
       setTimeout(function(){
@@ -70,9 +51,15 @@ export class LoginComponent implements OnInit {
         }
         resolve(null);
       }, 5000);
-    });
+    });   
+  }
 
-   
+  onSubmit() {
+    console.log("Hello", this.signupForm.value.userData.email, this.signupForm.value.password); 
+    this.auth.login(this.signupForm.value.userData.email, this.signupForm.value.password);  
+    if(this.auth.isAuthenticated) {
+      this.router.navigate(['/tweet', 'show']);
+    }
   }
 
 }
