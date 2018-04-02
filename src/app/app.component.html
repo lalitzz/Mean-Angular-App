@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container-fluid main" id="">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngIf="isLogged">
       <app-sidebar></app-sidebar>
     </div>
     <div class="col-sm-7">
