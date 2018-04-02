@@ -26,6 +26,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { CredentialService } from './services/credential.service';
 
 
 
@@ -53,7 +54,7 @@ import { SignupComponent } from './signup/signup.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [TweetService, AuthGuard, AuthService],
+  providers: [TweetService, AuthGuard, AuthService, CredentialService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

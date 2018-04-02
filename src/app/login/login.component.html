@@ -3,7 +3,7 @@
       <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
           <div formGroupName="userData">
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="username">Username</label>
               <input
                 type="text"
@@ -17,7 +17,7 @@
                 <span *ngIf="signupForm.get('userData.username').errors['required']">This field is required!</span>
   
               </span>
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="email">email</label>
               <input
@@ -38,12 +38,12 @@
               placeholder="Enter password"
               formControlName="password" 
               name="pswd">
-              <!-- <span
+              <span
                 *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
-                class="help-block">Please enter a valid email!</span> -->
+                class="help-block">Please enter a valid email!</span>
           </div>   
           
-          <div class="form-group">
+          <!-- <div class="form-group">
               <label for="fname">Fname:</label>
               <input type="text" 
               class="form-control" id="fname" 
@@ -53,11 +53,11 @@
               <span
                 *ngIf="!signupForm.get('fname').valid && signupForm.get('fname').touched"
                 class="help-block">Please enter a valid email!</span>
-          </div>   
+          </div>    -->
                 
-          <!-- <span
+          <span
             *ngIf="!signupForm.valid && signupForm.touched"
-            class="help-block">Please enter valid data!</span> -->
+            class="help-block">Please enter valid data!</span>
           <button class="btn btn-primary" type="submit">Submit</button>
         </form>
       </div>
