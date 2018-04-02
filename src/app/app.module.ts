@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -21,9 +21,11 @@ import { ShowComponent } from './tweet/show/show.component';
 import { CreateComponent } from './tweet/create/create.component';
 import { EditComponent } from './tweet/edit/edit.component';
 import { Routes, RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing.module';
+import { AppRoutingModule } from './modules/app.routing.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './services/auth.service';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -41,12 +43,15 @@ import { AuthService } from './services/auth.service';
     TweetComponent,
     ShowComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [TweetService, AuthGuard, AuthService],
   bootstrap: [AppComponent]

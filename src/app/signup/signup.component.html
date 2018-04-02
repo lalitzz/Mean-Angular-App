@@ -1,0 +1,55 @@
+<form (ngSubmit)="formSubmit()" #f="ngForm">
+  <div class="form-group">
+    <label for="fname">FirstName:</label>
+    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" 
+    name="fname" ngModel 
+    required
+    #fname="ngModel">
+    <span *ngIf="fname===foo?true:false">Error</span>
+  </div>
+  <div class="form-group">
+      <label for="lname">LastName:</label>
+      <input type="text" class="form-control" id="lname" placeholder="Enter First Name" name="lname" ngModel required>
+  </div>
+  <div class="form-group">
+      <label for="email">Mail</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        ngModel
+        name="email"
+        required
+        email
+        #email="ngModel">
+    <span class="alert alert-danger" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+    </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" 
+    class="form-control" id="pwd" 
+    placeholder="Enter password" 
+    name="pswd" ngModel 
+    required
+    minlength="5"
+    #pswd="ngModel">
+    <!--<span class="alert alert-danger" *ngIf="!pswd.valid && pswd.touched">Password should be of length 5!</span>
+    -->
+      <span class="alert alert-danger" *ngIf="!pswd.valid && pswd.touched">Password should be greater than length 5!</span>
+      </div>
+  
+  <div class="radio" *ngFor="let gender of genders">
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          ngModel
+          [value]="gender"
+          required>
+        {{ gender }}
+      </label>
+    </div>
+  <button
+  class="btn btn-primary"
+  type="submit">Submit</button>
+</form>
