@@ -1,0 +1,372 @@
+
+    #aboutme {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        background: url('https://i.stack.imgur.com/lma5g.png');
+        background-repeat: repeat;
+        color: white;
+        width: 100%;
+        margin-right: 0;
+        border-top: 1px solid #ddd;
+        border-radius: 7px;
+        border-bottom: 1px solid #ddd;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 2em;
+    }
+    
+    .about-me-text {
+        text-align: left;
+        margin-top: 40px;
+    }
+    /* Styles go here */
+    
+    .skill-div #diagram {
+        width: 20%;
+    }
+    
+    .arc {
+        width: 20%;
+    }
+    
+    .my-skills h4 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 3em;
+        color: #000;
+        margin-left: 9%;
+        margin-top: 25px;
+    }
+    
+    .my-skills {
+        border-bottom: 1px solid #ddd;
+        border-radius: 7px;
+        background: url('http://img.freepik.com/free-vector/technological-background-with-connected-lines_1017-7096.jpg?size=338&ext=jpg')
+		no-repeat center center fixed;
+		 background-size: cover;
+		 background-attachment: fixed;
+		 z-index:-99;
+        background-repeat: repeat;
+    }
+    
+    .cont-proj {
+        margin-top: 50px;
+    }
+    
+    .proj-header {
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: #000;
+    }
+    
+    .featurette-image:hover {
+        opacity: 0.25;
+    }
+    
+    .featurette-image * {
+        transition: all .25s;
+    }
+    
+    .overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0, 0.9);
+		overflow-y: hidden;
+		transition: 0.5s;
+		opacity:1;
+	}
+
+	.overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.overlay a {
+		padding: 8px;
+		text-decoration: none;
+		font-size: 4em;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+		
+	}
+
+	.overlay a:hover, .overlay a:focus {
+		color: #f1f1f1;
+	}
+
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+
+    .bck-img{
+		 background: url('https://s-media-cache-ak0.pinimg.com/originals/22/61/c0/2261c01c4999fab8466f0e88c1a21cd9.jpg') no-repeat center center fixed;
+		 background-size: cover;
+		 background-attachment: fixed;
+		 z-index:-99;
+		 position:static;
+
+		 }
+    p{
+		font-weight: 500;
+	}
+	
+    @media only screen and (min-width: 768px) {
+        .skill-cont {
+            height: 400px;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        {
+            font-family: Roboto Slab;
+            margin-bottom: 14px;
+        }
+        h1 {
+            font-size: 6em;
+            font-family: Oswald;
+            letter-spacing: 0.4em;
+            line-height: 1.2em;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+        h2 {
+            font-size: 4em;
+            line-height: 1em;
+        }
+        h3 {
+            font-size: 3.2em;
+            line-height: 0.9em;
+        }
+        h4 {
+            font-size: 2.5em;
+            line-height: 0.7em;
+        }
+        h5 {
+            font-size: 2em;
+            line-height: 0.7em;
+        }
+        h6 {
+            font-size: 0.5em;
+        }
+		p{
+			font-size:0.9em;
+		}
+        .check {
+            position: center;
+            margin-left: 0.2em;
+            font-size: 1.7em;
+        }
+        #diagram {
+            width: 50%;
+            float: right;
+            margin-bottom: 0;
+        }
+        .legend {
+            float: left;
+            width: 50px;
+            margin-top: 5%;
+            margin-right: 0;
+            margin-left: 30%;
+        }
+        .skills {
+            float: left;
+            width: 30%;
+        }
+        .div-car {
+            width: 100%;
+            margin: 0;
+            height: auto;
+            text-align: center;
+        }
+        .skill-holder {
+            margin-top: 40px;
+        }
+		.overlay{
+			display: none;
+		}
+		
+    }
+    
+    @media screen and (max-width: 767px) {
+		
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        {
+            font-family: Roboto Slab;
+            margin-bottom: 7px;
+
+        }
+        h1 {
+            font-size: 3em;
+            font-family: Oswald;
+            letter-spacing: 0.2em;
+            line-height: 0.7em;
+            font-weight: 350;
+            word-wrap: break-word;
+        }
+		h2 {
+            font-size: 2.5em;
+            line-height: 1em;
+        }
+        h3 {
+            font-size: 2em;
+            line-height: 0.9em;
+        }
+        h4 {
+            font-size: 1.2em;
+            line-height: 0.5em;
+        }
+        h5 {
+            font-size: 2em;
+            line-height: 21px;
+        }
+        h6 {
+            font-size: 1.5em;
+        }
+		p{
+			font-size:0.7em;
+		}
+        .div-car {
+            width: 100%;
+            margin: 0;
+            height: auto;
+            text-align: center;
+        }
+        .skill-holder {
+            margin-top: 40px;
+        }
+        #content {
+            width: 100%;
+            height: auto;
+        }
+        .legend {
+            float: left;
+            width: 20%;
+            margin-top: 3%;
+            margin-right: 0;
+            margin-left: 50%;
+        }
+        #diagram {
+            width: 100%;
+            height: 400px;
+            margin-top: 10%;
+        }
+        .skill-cont {
+            height: 500px;
+        }
+		.overlay {overflow-y: auto;}
+		  .overlay a {font-size: 2.5em}
+		  .overlay .closebtn {
+			font-size: 5em;
+			top: 15px;
+			right: 35px;
+          }
+		#welcome {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#wlc-hdr {
+        -webkit-text-stroke-color: #cb8e58;
+        -webkit-text-stroke-width: 0.02em;
+	    color: #696969;
+		font-size:2.5em;
+		}
+    }
+    
+
+    .skills ul,
+    .skills li {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .skills li {
+        float: right;
+        clear: both;
+        padding: 0 15px;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        margin-bottom: 1px;
+        font-size: 1.5em;
+    }
+    
+    .skills .py {
+        background: blue;
+    }
+    
+    .skills .jq {
+        background: #97BE0D;
+    }
+    
+    .skills .css {
+        background: #ff4d4d;
+    }
+    
+    .skills .html {
+        background: #668cff;
+    }
+    
+    .skills .php {
+        background: #5cd65c;
+    }
+    
+    .skills .sql {
+        background: #b30000;
+    }
+    
+    .get {
+        display: none;
+    }
+    /* ------ anchors
+-----------------------------------------------*/
+    
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    @media screen and (max-width: 225px) {
+	   h4{
+	     line-height:1em;
+	   }
+	   #wlc-hdr {
+        -webkit-text-stroke-color: #cb8e58;
+        -webkit-text-stroke-width: 0.02em;
+    
+	    color: #696969;
+		font-size:1.5em;
+		}
+	}
+	 @media screen and (max-width: 100px) {
+	   h4{
+	     line-height:1em;
+		 font-size:0.2em;
+	   }
+	   #wlc-hdr {
+        -webkit-text-stroke-color: #cb8e58;
+        -webkit-text-stroke-width: 0.02em;
+        
+	    color: #696969;
+		font-size:0.5em;
+		}
+	}

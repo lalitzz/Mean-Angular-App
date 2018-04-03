@@ -27,6 +27,7 @@ import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CredentialService } from './services/credential.service';
+import { SkillsComponent } from './skills/skills.component';
 
 
 
@@ -46,7 +47,8 @@ import { CredentialService } from './services/credential.service';
     CreateComponent,
     EditComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

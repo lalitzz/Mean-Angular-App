@@ -7,7 +7,7 @@ import { TweetService } from '../services/tweet.service';
   styleUrls: ['./tweet.component.scss']
 })
 export class TweetComponent implements OnInit {
-  tweetData: Array<Object>; 
+  tweetData: Array<Object>;
   constructor(private tweets: TweetService) { }
 
   ngOnInit() {
