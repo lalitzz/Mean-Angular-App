@@ -24,12 +24,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './modules/app.routing.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './services/auth.service';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { CredentialService } from './services/credential.service';
 import { SkillsComponent } from './skills/skills.component';
 
-
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -46,15 +44,14 @@ import { SkillsComponent } from './skills/skills.component';
     ShowComponent,
     CreateComponent,
     EditComponent,
-    LoginComponent,
-    SignupComponent,
     SkillsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule
   ],
   providers: [TweetService, AuthGuard, AuthService, CredentialService],
   bootstrap: [AppComponent]
