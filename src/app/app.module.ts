@@ -16,10 +16,6 @@ import { BasicHighlightDirective } from './directives/basichighlight.directive';
 import { BetterHighlightDirective } from './directives/better/betterhighlight.directive';
 import { UnlessDirective } from './directives/unless/unless.directive';
 import { TweetService } from './services/tweet.service';
-import { TweetComponent } from './tweet/tweet.component';
-import { ShowComponent } from './tweet/show/show.component';
-import { CreateComponent } from './tweet/create/create.component';
-import { EditComponent } from './tweet/edit/edit.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './modules/app.routing.module';
 import { AuthGuard } from './auth-guard.service';
@@ -28,6 +24,8 @@ import { CredentialService } from './services/credential.service';
 import { SkillsComponent } from './skills/skills.component';
 
 import { AuthModule } from './auth/auth.module';
+
+import { TweetModule } from './tweet/tweet.module';
 
 @NgModule({
   declarations: [
@@ -40,10 +38,6 @@ import { AuthModule } from './auth/auth.module';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    TweetComponent,
-    ShowComponent,
-    CreateComponent,
-    EditComponent,
     SkillsComponent
   ],
   imports: [
@@ -51,7 +45,8 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AuthModule
+    AuthModule,
+    TweetModule
   ],
   providers: [TweetService, AuthGuard, AuthService, CredentialService],
   bootstrap: [AppComponent]
