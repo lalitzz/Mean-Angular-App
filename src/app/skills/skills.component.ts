@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import 'init.js'
+//import 'webGlObject';
 
-declare var webGlObject: any;
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -12,7 +12,7 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    webGlObject.init();
+    //mySkill.init();
   }
 
 }

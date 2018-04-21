@@ -24,7 +24,8 @@
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/raphael/raphael.min.js"
+        "../node_modules/raphael/raphael.min.js",
+        "../src/app/skills/init.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
