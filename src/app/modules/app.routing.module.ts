@@ -10,6 +10,7 @@ import { AuthGuard } from './../auth-guard.service';
 import { MainComponent } from './../main/main.component';
 import { SignupComponent } from '../signup/signup.component';
 import { LoginComponent } from '../login/login.component';
+import { SkillsComponent } from '../skills/skills.component';
 
 const routes: Routes = [
     {path: 'tweet', canActivateChild: [AuthGuard], component: TweetComponent, children: [
@@ -17,8 +18,9 @@ const routes: Routes = [
       { path: 'create', component: CreateComponent },
       { path: 'edit/:id', component: EditComponent }
     ]  },
-    { path:'signup', component: SignupComponent},
-    { path:'login', component: LoginComponent},
+    { path:'signup', component: SignupComponent },
+    { path:'login', component: LoginComponent },
+    { path:'skill', component: SkillsComponent },
     {path: '', component: MainComponent },
     { path: '**', redirectTo: '/' }
   ];
