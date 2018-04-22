@@ -14,6 +14,7 @@ export class EditComponent implements OnInit {
   ngOnInit() {
     let id: number;
     //const id = +this.route.snapshot.params['id'];
+    console.log(this.route.snapshot.fragment);
     this.route.params.subscribe(
       (data: Data)=>{
         id = +data['id'];

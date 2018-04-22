@@ -21,11 +21,11 @@ import { AppRoutingModule } from './modules/app.routing.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { CredentialService } from './services/credential.service';
-import { SkillsComponent } from './skills/skills.component';
 
 import { AuthModule } from './auth/auth.module';
 
 import { TweetModule } from './tweet/tweet.module';
+
 
 @NgModule({
   declarations: [
@@ -37,8 +37,7 @@ import { TweetModule } from './tweet/tweet.module';
     DummyComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective,
-    SkillsComponent
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
