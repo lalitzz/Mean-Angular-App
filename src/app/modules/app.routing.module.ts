@@ -4,10 +4,10 @@ import { TweetService } from './../services/tweet.service';
 import { AuthGuard } from './../auth-guard.service';
 
 import { MainComponent } from './../main/main.component';
-import { SkillsComponent } from '../skills/skills.component';
+import { ProfileModule } from './../profile/profile.module';
 
 const routes: Routes = [
-    { path:'skill', component: SkillsComponent },
+    {path: 'profile', loadChildren: './../profile/profile.module#ProfileModule'},
     {path: '', component: MainComponent }
   ];
 
